@@ -1,27 +1,41 @@
+/**
+ *
+ * @author 6284773
+ *
+ * Title:       IntelliJ Challenge 1A
+ * Semester:    COP2210 - Spring 2022
+ * Professor:   Charters
+ * Description: This program is our first IntelliJ challenge to
+ *              practice writing methods, and calling them.
+ *
+ *
+ */
+
 import java.util.Scanner;
 
 public class Challenge1A {
 
-static int day1CalConsumed,
-    day1CalBurned,
-    day2CalConsumed,
-    day2CalBurned,
-    day3CalConsumed,
-    day3CalBurned,
-    day4CalConsumed,
-    day4CalBurned,
-    day5CalConsumed,
-    day5CalBurned,
-    day6CalConsumed,
-    day6CalBurned,
-    day7CalConsumed,
-    day7CalBurned;
+ // Global variables assigned calories consumed and calories burned for each day /
+    static int day1CalConsumed,
+            day1CalBurned,
+            day2CalConsumed,
+            day2CalBurned,
+            day3CalConsumed,
+            day3CalBurned,
+            day4CalConsumed,
+            day4CalBurned,
+            day5CalConsumed,
+            day5CalBurned,
+            day6CalConsumed,
+            day6CalBurned,
+            day7CalConsumed,
+            day7CalBurned;
 
     static int totalCaloriesConsumed, totalCaloriesBurned;
 
     static double averageCaloriesConsumed,
-    averageCaloriesBurned,
-    netWeeklyPounds;
+            averageCaloriesBurned,
+            netWeeklyPounds;
 
     public static void main(String[] args) {
         getUserInput();
@@ -98,11 +112,11 @@ static int day1CalConsumed,
 
         totalCaloriesBurned = day1CalBurned + day2CalBurned + day3CalBurned + day4CalBurned + day5CalBurned + day6CalBurned +day7CalBurned;
 
-        averageCaloriesConsumed = totalCaloriesConsumed / 7;
+        averageCaloriesConsumed = (double) totalCaloriesConsumed / 7.0;
 
-        averageCaloriesBurned = totalCaloriesBurned / 7;
+        averageCaloriesBurned = (double) totalCaloriesBurned / 7.0;
 
-        netWeeklyPounds = (averageCaloriesConsumed - totalCaloriesBurned) / 3000;
+        netWeeklyPounds = (averageCaloriesConsumed - (double) totalCaloriesBurned) / 3000;
 
 
     }
@@ -111,12 +125,12 @@ static int day1CalConsumed,
     {
 
         System.out.printf("You consumed a total of " + ("%,d") + " calories this week.\n", totalCaloriesConsumed);
-        System.out.printf("You burned a total of " + ("%,d") + " calories this week.\n\n", totalCaloriesBurned);
+        System.out.printf("You burned a total of " + ("%,d") + " calories this week.\n", totalCaloriesBurned);
 
         System.out.printf("You consumed an average of " + ("%,.2f") + " calories a day.\n", averageCaloriesConsumed);
-        System.out.printf("You burned an average of " + ("%,.2f") + " calories a day.\n\n", averageCaloriesBurned);
+        System.out.printf("You burned an average of " + ("%,.2f") + " calories a day.\n", averageCaloriesBurned);
 
-        System.out.printf("Your net weekly gain/loss were " + ("%,.2f") + " pounds.", netWeeklyPounds);
+        System.out.printf("Your net weekly gain/loss were " + ("%,.3f") + " pounds.", netWeeklyPounds);
 
     }
 }
