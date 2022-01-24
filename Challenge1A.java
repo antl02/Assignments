@@ -23,7 +23,7 @@ static int day1CalConsumed,
     averageCaloriesBurned,
     netWeeklyPounds;
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         getUserInput();
         calculateCalories();
         displayCalories();
